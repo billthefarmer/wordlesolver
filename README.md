@@ -1,4 +1,4 @@
-# wordlesolver
+# WordleSolver
 Wordle (Gurgle) solver with code from https://github.com/PoorLazyCoder/Wordle-Solver.
 
 See https://github.com/PoorLazyCoder/Wordle-Solver for explanation.
