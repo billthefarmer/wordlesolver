@@ -3,4 +3,7 @@
 
   <string name="appName">WordleSolver</string>
 
+  <string name="refresh">Refresh</string>
+  <string name="solve">Solve</string>
+
 </resources>

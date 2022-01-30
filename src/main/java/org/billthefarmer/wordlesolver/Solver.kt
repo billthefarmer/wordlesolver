@@ -46,6 +46,7 @@ class Solver(
 
 
         // letters remove from gray
+        @Suppress("UNUSED_VARIABLE")
         var removeWs = mutableListOf<String>().apply {
             addAll(g)
             addAll(y1)

@@ -23,6 +23,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.KeyEvent;
 import android.view.View;
@@ -145,6 +146,51 @@ public class Main extends Activity
         resultText = (TextView) findViewById(R.id.result);
     }
 
+    // On create options menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        // Inflate the menu; this adds items to the action bar if it
+        // is present.
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main, menu);
+
+        return true;
+    }
+
+    // On options item selected
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        // Get id
+        int id = item.getItemId();
+        switch (id)
+        {
+        case R.id.refresh:
+            refresh();
+            break;
+
+        case R.id.solve:
+            solve();
+            break;
+        }
+
+        return true;
+    }
+
+    // refresh
+    private void refresh()
+    {
+        for (TextView text: greenArray)
+            text.setText("");
+
+        for (TextView row[]: yellowArray)
+            for (TextView text: row)
+                text.setText("");
+        greyText.setText("");
+    }
+
+    // solve
     private void solve()
     {
         greenList.clear();
@@ -164,7 +210,9 @@ public class Main extends Activity
                                                yellowList.get(1),
                                                yellowList.get(2),
                                                grey).solve();
-        Log.d(TAG, "Result: " + result);
+        if (BuildConfig.DEBUG)
+            Log.d(TAG, "Result: " + result);
+
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < result.size(); i++)
         {
