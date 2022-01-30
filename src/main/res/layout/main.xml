@@ -308,9 +308,10 @@
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
       android:layout_marginTop="4dp"
+      android:layout_marginBottom="4dp"
       android:gravity="center"
       android:orientation="horizontal"
-      tools:ignore="Autofill">
+      tools:ignore="UselessParent">
 
     <ScrollView
         android:layout_width="wrap_content"
@@ -320,7 +321,6 @@
           android:id="@+id/result"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="Results"
           android:textAppearance="?android:attr/textAppearanceLarge" />
 
     </ScrollView>
