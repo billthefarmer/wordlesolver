@@ -14,12 +14,176 @@
     -->
   </style>
 
+  <style name="AppCyanBaseTheme" parent="AppBaseTheme">
+    <!--
+        Theme customizations available in newer API levels can go in
+        res/values-vXX/styles.xml, while customizations related to
+        backward-compatibility can go here.
+    -->
+
+    <item name="android:actionBarStyle">@style/actionBarCyanStyle</item>
+
+  </style>
+
+  <style name="AppBlueBaseTheme" parent="AppBaseTheme">
+    <!--
+        Theme customizations available in newer API levels can go in
+        res/values-vXX/styles.xml, while customizations related to
+        backward-compatibility can go here.
+    -->
+
+    <item name="android:actionBarStyle">@style/actionBarBlueStyle</item>
+
+  </style>
+
+  <style name="AppOrangeBaseTheme" parent="AppBaseTheme">
+    <!--
+        Theme customizations available in newer API levels can go in
+        res/values-vXX/styles.xml, while customizations related to
+        backward-compatibility can go here.
+    -->
+
+    <item name="android:actionBarStyle">@style/actionBarOrangeStyle</item>
+
+  </style>
+
+  <style name="AppPurpleBaseTheme" parent="AppBaseTheme">
+    <!-- API 21 theme customizations can go here. -->
+
+    <item name="android:actionBarStyle">@style/actionBarPurpleStyle</item>
+
+  </style>
+
+  <style name="AppRedBaseTheme" parent="AppBaseTheme">
+    <!-- API 21 theme customizations can go here. -->
+
+    <item name="android:actionBarStyle">@style/actionBarRedStyle</item>
+
+  </style>
+
   <!-- Application theme. -->
   <style name="AppTheme" parent="AppBaseTheme">
     <!--
         All customizations that are NOT specific to a particular
         API-level can go here.
     -->
+
+    <item name="android:textAppearanceLarge">
+      @style/textAppearanceLargeBold
+    </item>
+
+  </style>
+
+  <!-- Application theme. -->
+  <style name="AppCyanTheme" parent="AppCyanBaseTheme">
+    <!--
+        All customizations that are NOT specific to a particular
+        API-level can go here.
+    -->
+
+    <item name="android:windowBackground">@color/cyan_background</item>
+    <item name="android:textAppearanceLarge">
+      @style/textAppearanceLargeBold
+    </item>
+
+  </style>
+
+  <!-- Application theme. -->
+  <style name="AppBlueTheme" parent="AppBlueBaseTheme">
+    <!--
+        All customizations that are NOT specific to a particular
+        API-level can go here.
+    -->
+
+    <item name="android:windowBackground">@color/blue_background</item>
+    <item name="android:textAppearanceLarge">
+      @style/textAppearanceLargeBold
+    </item>
+
+  </style>
+
+  <!-- Application theme. -->
+  <style name="AppOrangeTheme" parent="AppOrangeBaseTheme">
+    <!--
+        All customizations that are NOT specific to a particular
+        API-level can go here.
+    -->
+
+    <item name="android:windowBackground">@color/orange_background</item>
+    <item name="android:textAppearanceLarge">
+      @style/textAppearanceLargeBold
+    </item>
+
+  </style>
+
+  <!-- Application theme. -->
+  <style name="AppPurpleTheme" parent="AppPurpleBaseTheme">
+    <!--
+        All customizations that are NOT specific to a particular
+        API-level can go here.
+    -->
+
+    <item name="android:windowBackground">@color/purple_background</item>
+    <item name="android:textAppearanceLarge">
+      @style/textAppearanceLargeBold
+    </item>
+
+  </style>
+
+  <!-- Application theme. -->
+  <style name="AppRedTheme" parent="AppRedBaseTheme">
+    <!--
+        All customizations that are NOT specific to a particular
+        API-level can go here.
+    -->
+
+    <item name="android:windowBackground">@color/red_background</item>
+    <item name="android:textAppearanceLarge">
+      @style/textAppearanceLargeBold
+    </item>
+
+  </style>
+
+  <style name="actionBarCyanStyle"
+         parent="android:style/Widget.Holo.ActionBar">
+
+    <item name="android:background">@color/cyan_action_bar</item>
+
+  </style>
+
+  <style name="actionBarBlueStyle"
+         parent="android:style/Widget.Holo.ActionBar">
+
+    <item name="android:background">@color/blue_action_bar</item>
+
+  </style>
+
+  <style name="actionBarOrangeStyle"
+         parent="android:style/Widget.Holo.ActionBar">
+
+    <item name="android:background">@color/orange_action_bar</item>
+
+  </style>
+
+  <style name="actionBarPurpleStyle"
+         parent="android:style/Widget.Holo.ActionBar">
+
+    <item name="android:background">@color/purple_action_bar</item>
+
+  </style>
+
+  <style name="actionBarRedStyle"
+         parent="android:style/Widget.Holo.ActionBar">
+
+    <item name="android:background">@color/red_action_bar</item>
+
+  </style>
+
+  <style name="textAppearanceLargeBold"
+         parent="android:style/TextAppearance.Large">
+
+        <item name="android:textStyle">bold</item>
+
   </style>
 
 </resources>

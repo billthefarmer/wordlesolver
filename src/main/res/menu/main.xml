@@ -16,4 +16,44 @@
       android:showAsAction="always"
       android:title="@string/solve" />
 
+  <item
+      android:id="@+id/theme"
+      android:icon="@drawable/ic_action_theme"
+      android:showAsAction="always"
+      android:title="@string/theme">
+    <menu>
+
+        <item
+            android:id="@+id/dark"
+            android:showAsAction="never"
+            android:title="@string/dark" />
+
+        <item
+            android:id="@+id/cyan"
+            android:showAsAction="never"
+            android:title="@string/cyan" />
+
+        <item
+            android:id="@+id/blue"
+            android:showAsAction="never"
+            android:title="@string/blue" />
+
+        <item
+            android:id="@+id/orange"
+            android:showAsAction="never"
+            android:title="@string/orange" />
+
+        <item
+            android:id="@+id/purple"
+            android:showAsAction="never"
+            android:title="@string/purple" />
+
+        <item
+            android:id="@+id/red"
+            android:showAsAction="never"
+            android:title="@string/red" />
+
+    </menu>
+  </item>
+
 </menu>

@@ -9,16 +9,13 @@ class Solver(
     // y yellow:  answer but not in the right position
     //  gray:   it is not in the answer at all
 
-
     fun solve(): List<List<String>> {
-
 
         if (g.joinToString("").trim().isEmpty()) g = listOf()
         if (y1.joinToString("").trim().isEmpty()) y1 = listOf()
         if (y2.joinToString("").trim().isEmpty()) y2 = listOf()
         if (y3.joinToString("").trim().isEmpty()) y3 = listOf()
         gray = gray.trim()
-
 
         var words = getAllDicWords().toList()
 
@@ -33,7 +30,6 @@ class Solver(
             }
         }
 
-
         if (y1.isNotEmpty()) {
             words = filterOutYellow(y1, words)
         }
@@ -43,7 +39,6 @@ class Solver(
         if (y3.isNotEmpty()) {
             words = filterOutYellow(y3, words)
         }
-
 
         // letters remove from gray
         @Suppress("UNUSED_VARIABLE")
@@ -55,7 +50,6 @@ class Solver(
             forEach { gray = gray.replace(it, "") }
         }
 
-
         if (gray.isNotEmpty()) {
             words = words.filter { w ->
                 w.none { gray.contains(it) }
@@ -64,7 +58,6 @@ class Solver(
 
         return words
     }
-
 
     fun filterOutYellow(y: List<String>, words: List<List<String>>) = run {
         words.filter { w ->
@@ -81,7 +74,6 @@ class Solver(
         }
     }
 
-
     companion object {
 
         private var dicWords: List<List<String>> = listOf()
@@ -96,7 +88,7 @@ class Solver(
                 tempWords.addAll(dicWords2)
                 tempWords.addAll(dicWords3)
 
-                // tempWords.sort()
+                tempWords.sort()
 
                 tempWords.forEach {
                     val w = it.split("").toMutableList()
@@ -110,11 +102,8 @@ class Solver(
 
             return dicWords
         }
-
     }
-
 }
-
 
 fun joinListColumns(words: List<List<String>>, numOfColumn: Int): String {
     var sb: StringBuffer = StringBuffer()

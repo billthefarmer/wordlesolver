@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <!--  dark theme  -->
+
+  <!--  Blue theme  -->
+  <color name="blue_background">#242d48</color>
+  <color name="blue_action_bar">#2d3d72</color>
+
+  <!--  red theme  -->
+  <color name="red_background">#ed2424</color>
+  <color name="red_action_bar">#7a0f28</color>
+
+  <!--  orange theme  -->
+  <color name="orange_background">#f35b1f</color>
+  <color name="orange_action_bar">#f34712</color>
+
+
+  <!--  cyan theme  -->
+  <color name="cyan_background">#60e8ff</color>
+  <color name="cyan_action_bar">#5696a1</color>
+
+  <!--  purple theme  -->
+  <color name="purple_background">#a42ee5</color>
+  <color name="purple_action_bar">#8a3ab5</color>
+
+</resources>

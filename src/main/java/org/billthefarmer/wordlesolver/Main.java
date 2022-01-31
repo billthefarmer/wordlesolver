@@ -1,3 +1,5 @@
+////////////////////////////////////////////////////////////////////////////////
+//
 //  Wordle solver
 //
 //  Copyright (C) 2022	Bill Farmer
@@ -14,18 +16,25 @@
 //
 //  You should have received a copy of the GNU General Public License
 //  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//
+//  Bill Farmer	 william j farmer [at] yahoo [dot] co [dot] uk.
+//
+///////////////////////////////////////////////////////////////////////////////
 
 package org.billthefarmer.wordlesolver;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
@@ -37,10 +46,18 @@ import java.util.List;
 public class Main extends Activity
 {
     public static final String TAG = "WordleSolver";
+    public static final String PREF_THEME = "pref_theme";
     public static final int ROWS[] =
     {
         R.id.yellow1,  R.id.yellow2,  R.id.yellow3
     };
+
+    public static final int DARK   = 1;
+    public static final int CYAN   = 2;
+    public static final int BLUE   = 3;
+    public static final int ORANGE = 4;
+    public static final int PURPLE = 5;
+    public static final int RED    = 6;
 
     private TextView greyText;
     private TextView resultText;
@@ -49,11 +66,46 @@ public class Main extends Activity
     private List<String> greenList;
     private List<List<String>> yellowList;
 
+    private int theme;
+
     // Called when the activity is first created.
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+
+        SharedPreferences preferences =
+            PreferenceManager.getDefaultSharedPreferences(this);
+
+        theme = preferences.getInt(PREF_THEME, DARK);
+
+        switch (theme)
+        {
+        default:
+        case DARK:
+            setTheme(R.style.AppTheme);
+            break;
+
+        case CYAN:
+            setTheme(R.style.AppCyanTheme);
+            break;
+
+        case BLUE:
+            setTheme(R.style.AppBlueTheme);
+            break;
+
+        case ORANGE:
+            setTheme(R.style.AppOrangeTheme);
+            break;
+
+        case PURPLE:
+            setTheme(R.style.AppPurpleTheme);
+            break;
+
+        case RED:
+            setTheme(R.style.AppRedTheme);
+            break;
+        }
 
         setContentView(R.layout.main);
 
@@ -146,6 +198,20 @@ public class Main extends Activity
         resultText = (TextView) findViewById(R.id.result);
     }
 
+    // onPause
+    @Override
+    public void onPause()
+    {
+        super.onPause();
+
+        SharedPreferences preferences =
+            PreferenceManager.getDefaultSharedPreferences(this);
+        SharedPreferences.Editor editor = preferences.edit();
+
+        editor.putInt(PREF_THEME, theme);
+        editor.apply();
+    }
+
     // On create options menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
@@ -172,6 +238,30 @@ public class Main extends Activity
 
         case R.id.solve:
             solve();
+            break;
+
+        case R.id.dark:
+            theme(DARK);
+            break;
+
+        case R.id.cyan:
+            theme(CYAN);
+            break;
+
+        case R.id.blue:
+            theme(BLUE);
+            break;
+
+        case R.id.orange:
+            theme(ORANGE);
+            break;
+
+        case R.id.purple:
+            theme(PURPLE);
+            break;
+
+        case R.id.red:
+            theme(RED);
             break;
         }
 
@@ -221,5 +311,13 @@ public class Main extends Activity
         }
 
         resultText.setText(builder);
+    }
+
+    // theme
+    private void theme(int t)
+    {
+        theme = t;
+        if (Build.VERSION.SDK_INT != Build.VERSION_CODES.M)
+            recreate();
     }
 }
