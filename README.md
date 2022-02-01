@@ -1,4 +1,4 @@
-# WordleSolver [![.github/workflows/build.yml](https://github.com/billthefarmer/wordlesolver/actions/workflows/build.yml/badge.svg)](https://github.com/billthefarmer/wordlesolver/actions/workflows/build.yml)
+# ![Icon](src/main/res/drawable-xhdpi/ic_launcher.png) WordleSolver [![.github/workflows/build.yml](https://github.com/billthefarmer/wordlesolver/actions/workflows/build.yml/badge.svg)](https://github.com/billthefarmer/wordlesolver/actions/workflows/build.yml)
 [Wordle](https://www.powerlanguage.co.uk/wordle/)
 ([Gurgle](https://github.com/billthefarmer/gurgle)) solver with code
 from https://github.com/PoorLazyCoder/Wordle-Solver.
