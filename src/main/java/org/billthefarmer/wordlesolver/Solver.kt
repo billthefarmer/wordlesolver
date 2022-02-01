@@ -1,4 +1,5 @@
-package org.billthefarmer.wordlesolver
+
+package org.billthefarmer.solver
 
 class Solver(
     private var g: List<String>, var y1: List<String>, var y2: List<String>,
@@ -6,8 +7,8 @@ class Solver(
 ) {
 
     // g green:  is correct and in the correct position
-    // y yellow:  answer but not in the right position
-    //  gray:   it is not in the answer at all
+    // y yellow: is in answer but not in the right position
+    // gray:     is not in the answer at all
 
     fun solve(): List<List<String>> {
 
@@ -15,6 +16,7 @@ class Solver(
         if (y1.joinToString("").trim().isEmpty()) y1 = listOf()
         if (y2.joinToString("").trim().isEmpty()) y2 = listOf()
         if (y3.joinToString("").trim().isEmpty()) y3 = listOf()
+
         gray = gray.trim()
 
         var words = getAllDicWords().toList()

@@ -21,7 +21,7 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
-package org.billthefarmer.wordlesolver
+package org.billthefarmer.solver
 
 val dicWords2:List<String> = listOf (
 

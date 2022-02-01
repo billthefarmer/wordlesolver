@@ -24,7 +24,7 @@ android {
     compileSdkVersion 28
 
     defaultConfig {
-        applicationId "org.billthefarmer.wordlesolver"
+        applicationId "org.billthefarmer.solver"
         minSdkVersion 14
         targetSdkVersion 28
         versionName "1.0"

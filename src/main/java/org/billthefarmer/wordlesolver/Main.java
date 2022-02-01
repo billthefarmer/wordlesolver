@@ -21,7 +21,7 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 
-package org.billthefarmer.wordlesolver;
+package org.billthefarmer.solver;
 
 import android.app.Activity;
 import android.content.SharedPreferences;
@@ -306,7 +306,10 @@ public class Main extends Activity
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < result.size(); i++)
         {
-            builder.append(result.get(i).toString());
+            List w = result.get(i);
+            for (int j = 0; j < w.size(); j++)
+                builder.append(String.format("%s ", w.get(j)));
+
             builder.append("\n");
         }
 

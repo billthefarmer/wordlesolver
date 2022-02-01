@@ -2,7 +2,7 @@
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="org.billthefarmer.wordlesolver"
+    package="org.billthefarmer.solver"
     android:installLocation="auto"
     tools:ignore="GoogleAppIndexingWarning">
 
