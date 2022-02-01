@@ -3,4 +3,4 @@ Wordle (Gurgle) solver with code from https://github.com/PoorLazyCoder/Wordle-So
 
 See https://github.com/PoorLazyCoder/Wordle-Solver for explanation.
 
-![Gurgle](https://github.com/billthefarmer/billthefarmer.github.io/raw/master/images/Gurgle-solver.jpg) ![Solver](https://github.com/billthefarmer/billthefarmer.github.io/raw/master/images/WordleSolver.png)
+![Gurgle](https://github.com/billthefarmer/billthefarmer.github.io/raw/master/images/Gurgle-solver.png) ![Solver](https://github.com/billthefarmer/billthefarmer.github.io/raw/master/images/WordleSolver.png)
