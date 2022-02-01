@@ -1,0 +1,5 @@
+* Multiple coloured themes
+
+Usually solves <a href="https://www.powerlanguage.co.uk/wordle/">Wordle</a> and <a href="https://github.com/billthefarmer/gurgle">Gurgle</a> puzzles in four tries.
+
+Uses solver code from <a href="https://github.com/PoorLazyCoder/Wordle-Solver">https://github.com/PoorLazyCoder/Wordle-Solver</a>.
