@@ -80,7 +80,6 @@
       android:id="@+id/yellow1"
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
-      android:layout_marginTop="4dp"
       android:gravity="center"
       android:orientation="horizontal"
       tools:ignore="Autofill">
@@ -147,7 +146,6 @@
       android:id="@+id/yellow2"
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
-      android:layout_marginTop="4dp"
       android:gravity="center"
       android:orientation="horizontal"
       tools:ignore="Autofill">
@@ -214,7 +212,6 @@
       android:id="@+id/yellow3"
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
-      android:layout_marginTop="4dp"
       android:gravity="center"
       android:orientation="horizontal"
       tools:ignore="Autofill">
@@ -280,7 +277,6 @@
   <LinearLayout
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
-      android:layout_marginTop="4dp"
       android:gravity="center"
       android:orientation="horizontal"
       tools:ignore="Autofill">
@@ -295,11 +291,10 @@
         android:id="@+id/grey"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="123456789"
+        android:hint="1234567890"
         android:imeOptions="actionNext"
         android:inputType="text"
         android:minWidth="120sp"
-        android:selectAllOnFocus="true"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
   </LinearLayout>
@@ -308,7 +303,7 @@
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
       android:layout_marginTop="4dp"
-      android:layout_marginBottom="4dp"
+      android:layout_marginBottom="8dp"
       android:gravity="center"
       android:orientation="horizontal"
       tools:ignore="UselessParent">
