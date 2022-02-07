@@ -19,6 +19,7 @@
       tools:ignore="Autofill">
 
     <EditText
+        android:id="@+id/g1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="4dp"
@@ -37,26 +38,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:paddingLeft="4dp"
-        android:paddingRight="4dp"
-        android:paddingTop="4dp"
-        android:paddingBottom="4dp"
-        android:background="@drawable/box"
-        android:textColor="#ff00ff00"
-        android:minWidth="35sp"
-        android:gravity="center"
-        android:hint="G"
-        android:imeOptions="actionNext"
-        android:inputType="textCapCharacters"
-        android:maxLength="1"
-        android:selectAllOnFocus="true"
-        tools:ignore="RtlHardcoded"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <EditText
+        android:id="@+id/g2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
@@ -77,6 +59,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
+        android:id="@+id/g3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
@@ -97,6 +80,28 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
+        android:id="@+id/g4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:background="@drawable/box"
+        android:textColor="#ff00ff00"
+        android:minWidth="35sp"
+        android:gravity="center"
+        android:hint="G"
+        android:imeOptions="actionNext"
+        android:inputType="textCapCharacters"
+        android:maxLength="1"
+        android:selectAllOnFocus="true"
+        tools:ignore="RtlHardcoded"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/g5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
@@ -128,6 +133,7 @@
       tools:ignore="Autofill">
 
     <EditText
+        android:id="@+id/y11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="4dp"
@@ -147,26 +153,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:paddingLeft="4dp"
-        android:paddingRight="4dp"
-        android:paddingTop="4dp"
-        android:paddingBottom="4dp"
-        android:background="@drawable/box"
-        android:textColor="#ffffff00"
-        android:minWidth="35sp"
-        android:gravity="center"
-        android:hint="Y"
-        android:imeOptions="actionNext"
-        android:inputType="textCapCharacters"
-        android:maxLength="1"
-        android:selectAllOnFocus="true"
-        tools:ignore="RtlHardcoded"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <EditText
+        android:id="@+id/y12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
@@ -187,6 +174,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
+        android:id="@+id/y13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
@@ -207,6 +195,28 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
+        android:id="@+id/y14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:background="@drawable/box"
+        android:textColor="#ffffff00"
+        android:minWidth="35sp"
+        android:gravity="center"
+        android:hint="Y"
+        android:imeOptions="actionNext"
+        android:inputType="textCapCharacters"
+        android:maxLength="1"
+        android:selectAllOnFocus="true"
+        tools:ignore="RtlHardcoded"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/y15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
@@ -238,6 +248,7 @@
       tools:ignore="Autofill">
 
     <EditText
+        android:id="@+id/y21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="4dp"
@@ -257,26 +268,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:paddingLeft="4dp"
-        android:paddingRight="4dp"
-        android:paddingTop="4dp"
-        android:paddingBottom="4dp"
-        android:background="@drawable/box"
-        android:textColor="#ffffff00"
-        android:minWidth="35sp"
-        android:gravity="center"
-        android:hint="Y"
-        android:imeOptions="actionNext"
-        android:inputType="textCapCharacters"
-        android:maxLength="1"
-        android:selectAllOnFocus="true"
-        tools:ignore="RtlHardcoded"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <EditText
+        android:id="@+id/y22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
@@ -297,6 +289,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
+        android:id="@+id/y23"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
@@ -317,6 +310,28 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
+        android:id="@+id/y24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:background="@drawable/box"
+        android:textColor="#ffffff00"
+        android:minWidth="35sp"
+        android:gravity="center"
+        android:hint="Y"
+        android:imeOptions="actionNext"
+        android:inputType="textCapCharacters"
+        android:maxLength="1"
+        android:selectAllOnFocus="true"
+        tools:ignore="RtlHardcoded"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/y25"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
@@ -348,6 +363,7 @@
       tools:ignore="Autofill">
 
     <EditText
+        android:id="@+id/y31"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="4dp"
@@ -367,26 +383,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:paddingLeft="4dp"
-        android:paddingRight="4dp"
-        android:paddingTop="4dp"
-        android:paddingBottom="4dp"
-        android:background="@drawable/box"
-        android:textColor="#ffffff00"
-        android:minWidth="35sp"
-        android:gravity="center"
-        android:hint="Y"
-        android:imeOptions="actionNext"
-        android:inputType="textCapCharacters"
-        android:maxLength="1"
-        android:selectAllOnFocus="true"
-        tools:ignore="RtlHardcoded"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <EditText
+        android:id="@+id/y32"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
@@ -407,6 +404,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
+        android:id="@+id/y33"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
@@ -427,6 +425,28 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
+        android:id="@+id/y34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:background="@drawable/box"
+        android:textColor="#ffffff00"
+        android:minWidth="35sp"
+        android:gravity="center"
+        android:hint="Y"
+        android:imeOptions="actionNext"
+        android:inputType="textCapCharacters"
+        android:maxLength="1"
+        android:selectAllOnFocus="true"
+        tools:ignore="RtlHardcoded"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/y35"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
