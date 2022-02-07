@@ -17,7 +17,7 @@ Uses solver code from
 [Wordle-Solver](https://github.com/PoorLazyCoder/Wordle-Solver).
 
 Letters that are shown green in the game
-([Wordle](href="https://www.powerlanguage.co.uk/wordle),
+([Wordle](https://www.powerlanguage.co.uk/wordle),
 [Gurgle](https://github.com/billthefarmer/gurgle)) go in the first
 green row in the correct place. Yellow letters go in the next yellow
 rows in the correct place. Letters shown grey go in the last row in
