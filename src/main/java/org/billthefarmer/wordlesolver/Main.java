@@ -203,15 +203,6 @@ public class Main extends Activity
             yellowList.add(new ArrayList<String>());
 
         resultText = (TextView) findViewById(R.id.result);
-
-        if (savedInstanceState != null)
-        {
-            greenList = savedInstanceState.getStringArrayList(GREEN);
-            yellowList.set(0, savedInstanceState.getStringArrayList(YELLOW_1));
-            yellowList.set(1, savedInstanceState.getStringArrayList(YELLOW_2));
-            yellowList.set(2, savedInstanceState.getStringArrayList(YELLOW_3));
-            String grey = savedInstanceState.getString(GREY);
-        }
     }
 
     // onPause
