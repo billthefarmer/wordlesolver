@@ -22,6 +22,10 @@
       </intent-filter>
     </activity>
 
+    <activity
+        android:name="Help"
+        android:label="@string/help" />
+
   </application>
 
 </manifest>

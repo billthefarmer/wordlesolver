@@ -56,4 +56,16 @@
     </menu>
   </item>
 
+  <item
+      android:id="@+id/help"
+      android:icon="@drawable/ic_action_help"
+      android:showAsAction="ifRoom"
+      android:title="@string/help" />
+
+  <item
+      android:id="@+id/about"
+      android:icon="@drawable/ic_action_about"
+      android:showAsAction="ifRoom"
+      android:title="@string/about" />
+
 </menu>

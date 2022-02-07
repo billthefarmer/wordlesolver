@@ -5,7 +5,6 @@
 
   <string name="refresh">Refresh</string>
   <string name="solve">Solve</string>
-
   <string name="theme">Theme</string>
   <string name="dark">Dark</string>
   <string name="cyan">Cyan</string>
@@ -13,5 +12,18 @@
   <string name="orange">Orange</string>
   <string name="purple">Purple</string>
   <string name="red">Red</string>
+  <string name="help">Help</string>
+  <string name="about">About</string>
+
+  <string name="version" formatted="false"><a
+  href="https://github.com/billthefarmer/solver/releases/latest">%s</a>\n\nBuilt
+  %s\n\nCopyright \u00A9 2022 <a
+  href="https://github.com/billthefarmer">Bill
+  Farmer</a>\n\nDictionaries from <a
+  href="https://github.com/lexica">Lexica</a>\nThemes and solver code
+  from <a
+  href="https://github.com/PoorLazyCoder">PoorLazyCoder</a>\n\nLicence
+  <a href="https://www.gnu.org/licenses/gpl.txt">GNU GPLv3</a>
+  </string>
 
 </resources>

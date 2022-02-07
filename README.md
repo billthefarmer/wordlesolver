@@ -23,8 +23,8 @@ green row in the correct place. Yellow letters go in the next yellow
 rows in the correct place. Letters shown grey go in the last row in
 any order.
 
-Then tap either the next button on the keyboard or the solve button in
-the toolbar. The next button only works if there is text where the
-cursor is, so it can be used to move to the next slot without
-triggering a search. The app will show a list of possible next guesses
-under the keyboard if on a small phone.
+Tap either the next button on the keyboard or the solve button in the
+toolbar. The next button only works if there is text where the cursor
+is, so it can be used to move to the next slot without triggering a
+search. The app will show a list of possible next guesses at the
+bottom under the keyboard if on a small phone.

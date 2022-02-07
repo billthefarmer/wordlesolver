@@ -24,12 +24,17 @@
 package org.billthefarmer.solver;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.text.Editable;
+import android.text.SpannableStringBuilder;
 import android.text.TextWatcher;
+import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -40,9 +45,14 @@ import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.widget.TextView;
 
+import java.text.DateFormat;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main extends Activity
 {
@@ -270,6 +280,14 @@ public class Main extends Activity
         case R.id.red:
             theme(RED);
             break;
+
+        case R.id.help:
+            help();
+            break;
+
+        case R.id.about:
+            about();
+            break;
         }
 
         return true;
@@ -333,5 +351,50 @@ public class Main extends Activity
         theme = t;
         if (Build.VERSION.SDK_INT != Build.VERSION_CODES.M)
             recreate();
+    }
+
+    // help
+    private void help()
+    {
+        Intent intent = new Intent(this, Help.class);
+        startActivity(intent);
+    }
+
+    // about
+    @SuppressWarnings("deprecation")
+    private void about()
+    {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(R.string.appName);
+        builder.setIcon(R.drawable.ic_launcher);
+
+        DateFormat dateFormat = DateFormat.getDateTimeInstance();
+        SpannableStringBuilder spannable =
+            new SpannableStringBuilder(getText(R.string.version));
+        Pattern pattern = Pattern.compile("%s");
+        Matcher matcher = pattern.matcher(spannable);
+        if (matcher.find())
+            spannable.replace(matcher.start(), matcher.end(),
+                              BuildConfig.VERSION_NAME);
+        matcher.reset(spannable);
+        if (matcher.find())
+            spannable.replace(matcher.start(), matcher.end(),
+                              dateFormat.format(BuildConfig.BUILT));
+        builder.setMessage(spannable);
+
+        // Add the button
+        builder.setPositiveButton(android.R.string.ok, null);
+
+        // Create the AlertDialog
+        Dialog dialog = builder.show();
+
+        // Set movement method
+        TextView text = dialog.findViewById(android.R.id.message);
+        if (text != null)
+        {
+            text.setTextAppearance(builder.getContext(),
+                                   android.R.style.TextAppearance_Small);
+            text.setMovementMethod(LinkMovementMethod.getInstance());
+        }
     }
 }
