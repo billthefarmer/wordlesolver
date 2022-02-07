@@ -2,26 +2,38 @@
 <resources>
 
   <!--  dark theme  -->
+  <color name="dark_box_background">@android:color/transparent</color>
+  <color name="dark_box_border">@android:color/black</color>
 
   <!--  Blue theme  -->
   <color name="blue_background">#242d48</color>
   <color name="blue_action_bar">#2d3d72</color>
+  <color name="blue_box_background">#20105c</color>
+  <color name="blue_box_border">#64548f</color>
 
   <!--  red theme  -->
   <color name="red_background">#ed2424</color>
   <color name="red_action_bar">#7a0f28</color>
+  <color name="red_box_background">#ed4e2e</color>
+  <color name="red_box_border">#edae25</color>
 
   <!--  orange theme  -->
   <color name="orange_background">#f35b1f</color>
   <color name="orange_action_bar">#f34712</color>
+  <color name="orange_box_background">#b44e16</color>
+  <color name="orange_box_border">#ffe67f</color>
 
 
   <!--  cyan theme  -->
   <color name="cyan_background">#60e8ff</color>
   <color name="cyan_action_bar">#5696a1</color>
+  <color name="cyan_box_background">#50c7c4</color>
+  <color name="cyan_box_border">#4c4dc7</color>
 
   <!--  purple theme  -->
   <color name="purple_background">#a42ee5</color>
   <color name="purple_action_bar">#8a3ab5</color>
+  <color name="purple_box_background">#9d79b1</color>
+  <color name="purple_box_border">#180e1d</color>
 
 </resources>

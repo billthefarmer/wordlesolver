@@ -42,11 +42,18 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class Main extends Activity
 {
     public static final String TAG = "WordleSolver";
     public static final String PREF_THEME = "pref_theme";
+    public static final String GREEN = "green";
+    public static final String YELLOW_1 = "yellow-1";
+    public static final String YELLOW_2 = "yellow-2";
+    public static final String YELLOW_3 = "yellow-3";
+    public static final String GREY = "grey";
+
     public static final int ROWS[] =
     {
         R.id.yellow1,  R.id.yellow2,  R.id.yellow3
@@ -166,10 +173,10 @@ public class Main extends Activity
         };
 
         ViewGroup greenRow = (ViewGroup) findViewById(R.id.green);
-        greenArray = new TextView[greenRow.getChildCount() - 1];
+        greenArray = new TextView[greenRow.getChildCount()];
         for (int i = 0; i < greenArray.length; i++)
         {
-            greenArray[i] = (TextView) greenRow.getChildAt(i + 1);
+            greenArray[i] = (TextView) greenRow.getChildAt(i);
             greenArray[i].setOnEditorActionListener(listener);
             greenArray[i].addTextChangedListener(watcher);
         }
@@ -178,10 +185,10 @@ public class Main extends Activity
         for (int i = 0; i < yellowArray.length; i++)
         {
             ViewGroup yellowRow = findViewById(ROWS[i]);
-            yellowArray[i] = new TextView[yellowRow.getChildCount() - 1];
+            yellowArray[i] = new TextView[yellowRow.getChildCount()];
             for (int j = 0; j < yellowArray[i].length; j++)
             {
-                yellowArray[i][j] = (TextView) yellowRow.getChildAt(j + 1);
+                yellowArray[i][j] = (TextView) yellowRow.getChildAt(j);
                 yellowArray[i][j].setOnEditorActionListener(listener);
                 yellowArray[i][j].addTextChangedListener(watcher);
             }
@@ -196,6 +203,15 @@ public class Main extends Activity
             yellowList.add(new ArrayList<String>());
 
         resultText = (TextView) findViewById(R.id.result);
+
+        if (savedInstanceState != null)
+        {
+            greenList = savedInstanceState.getStringArrayList(GREEN);
+            yellowList.set(0, savedInstanceState.getStringArrayList(YELLOW_1));
+            yellowList.set(1, savedInstanceState.getStringArrayList(YELLOW_2));
+            yellowList.set(2, savedInstanceState.getStringArrayList(YELLOW_3));
+            String grey = savedInstanceState.getString(GREY);
+        }
     }
 
     // onPause
@@ -285,16 +301,19 @@ public class Main extends Activity
     {
         greenList.clear();
         for (TextView green: greenArray)
-            greenList.add(green.getText().toString());
+            greenList.add(green.getText().toString()
+                          .toLowerCase(Locale.getDefault()));
 
         for (int i = 0; i < yellowArray.length; i++)
         {
             yellowList.get(i).clear();
             for (TextView yellow: yellowArray[i])
-                yellowList.get(i).add(yellow.getText().toString());
+                yellowList.get(i).add(yellow.getText().toString()
+                                      .toLowerCase(Locale.getDefault()));
         }
 
-        String grey = greyText.getText().toString();
+        String grey = greyText.getText().toString()
+            .toLowerCase(Locale.getDefault());
         List<List<String>> result = new Solver(greenList,
                                                yellowList.get(0),
                                                yellowList.get(1),
@@ -308,7 +327,8 @@ public class Main extends Activity
         {
             List w = result.get(i);
             for (int j = 0; j < w.size(); j++)
-                builder.append(String.format("%s ", w.get(j)));
+                builder.append(String.format("%s ", w.get(j))
+                               .toUpperCase(Locale.getDefault()));
 
             builder.append("\n");
         }
