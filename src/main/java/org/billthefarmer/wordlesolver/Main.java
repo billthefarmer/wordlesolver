@@ -43,6 +43,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 
 import java.text.DateFormat;
@@ -308,6 +309,10 @@ public class Main extends Activity
     // solve
     private void solve()
     {
+        InputMethodManager manager = (InputMethodManager)
+            getSystemService(INPUT_METHOD_SERVICE);
+        manager.hideSoftInputFromWindow(resultText.getWindowToken(), 0);
+
         greenList.clear();
         for (TextView green: greenArray)
             greenList.add(green.getText().toString()
