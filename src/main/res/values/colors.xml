@@ -2,10 +2,11 @@
 <resources>
 
   <!--  dark theme  -->
+  <color name="dark_background">#303030</color>
   <color name="dark_box_background">@android:color/transparent</color>
   <color name="dark_box_border">@android:color/black</color>
 
-  <!--  Blue theme  -->
+  <!--  blue theme  -->
   <color name="blue_background">#242d48</color>
   <color name="blue_action_bar">#2d3d72</color>
   <color name="blue_box_background">#20105c</color>
