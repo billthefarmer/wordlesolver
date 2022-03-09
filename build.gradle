@@ -25,10 +25,10 @@ android {
 
     defaultConfig {
         applicationId "org.billthefarmer.solver"
-        minSdkVersion 22
+        minSdkVersion 14
         targetSdkVersion 28
-        versionName "1.01"
-        versionCode 101
+        versionName "1.02"
+        versionCode 102
 
         buildConfigField "long", "BUILT", System.currentTimeMillis() + "L"
     }

@@ -30,5 +30,7 @@ any order.
 Tap either the next button on the keyboard or the solve button in the
 toolbar. The next button only works if there is text where the cursor
 is, so it can be used to move to the next slot without triggering a
-search. The app will show a list of possible next guesses at the
-bottom under the keyboard if on a small phone.
+search. The app will show a scrolling list of possible next guesses at
+the bottom.
+
+Select coloured theme from the **Theme** button in the toolbar.
