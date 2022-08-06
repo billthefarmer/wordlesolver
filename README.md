@@ -12,6 +12,7 @@ See https://github.com/PoorLazyCoder/Wordle-Solver for explanation.
 ![Gurgle](https://github.com/billthefarmer/billthefarmer.github.io/raw/master/images/Gurgle-solver.png) ![Solver](https://github.com/billthefarmer/billthefarmer.github.io/raw/master/images/WordleSolver.png)
 
  * Multiple coloured themes
+ * Multiple languages
 
 Usually solves [Wordle](href="https://www.powerlanguage.co.uk/wordle)
 and [Gurgle](https://github.com/billthefarmer/gurgle) puzzles in four
@@ -33,4 +34,6 @@ is, so it can be used to move to the next slot without triggering a
 search. The app will show a scrolling list of possible next guesses at
 the bottom.
 
-Select coloured theme from the **Theme** button in the toolbar.
+Select coloured theme from the **Theme** item in the menu.
+
+Select language from the **Language** item in the menu.
