@@ -241,6 +241,7 @@ public class Main extends Activity
         SharedPreferences.Editor editor = preferences.edit();
 
         editor.putInt(PREF_THEME, theme);
+        editor.putInt(PREF_LANG, language);
         editor.apply();
     }
 
