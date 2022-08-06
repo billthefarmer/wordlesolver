@@ -15,6 +15,16 @@
   <string name="help">Help</string>
   <string name="about">About</string>
 
+  <string name="language">Language</string>
+  <string name="english">English</string>
+  <string name="italian">Italian</string>
+  <string name="spanish">Spanish</string>
+  <string name="catalan">Catalan</string>
+  <string name="french">French</string>
+  <string name="portuguese">Portuguese</string>
+  <string name="german">German</string>
+  <string name="dutch">Dutch</string>
+
   <string name="version" formatted="false"><a
   href="https://github.com/billthefarmer/solver/releases/latest">%s</a>\n\nBuilt
   %s\n\nCopyright \u00A9 2022 <a

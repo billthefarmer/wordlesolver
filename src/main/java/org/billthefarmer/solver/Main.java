@@ -59,6 +59,7 @@ public class Main extends Activity
 {
     public static final String TAG = "WordleSolver";
     public static final String PREF_THEME = "pref_theme";
+    public static final String PREF_LANG = "pref_lang";
     public static final String GREEN = "green";
     public static final String YELLOW_1 = "yellow-1";
     public static final String YELLOW_2 = "yellow-2";
@@ -77,6 +78,15 @@ public class Main extends Activity
     public static final int PURPLE = 5;
     public static final int RED    = 6;
 
+    public static final int ENGLISH    = 0;
+    public static final int ITALIAN    = 1;
+    public static final int SPANISH    = 2;
+    public static final int CATALAN    = 3;
+    public static final int FRENCH     = 4;
+    public static final int PORTUGUESE = 5;
+    public static final int GERMAN     = 6;
+    public static final int DUTCH      = 7;
+
     private TextView greyText;
     private TextView resultText;
     private TextView greenArray[];
@@ -85,6 +95,7 @@ public class Main extends Activity
     private List<List<String>> yellowList;
 
     private int theme;
+    private int language;
 
     // Called when the activity is first created.
     @Override
@@ -96,6 +107,7 @@ public class Main extends Activity
             PreferenceManager.getDefaultSharedPreferences(this);
 
         theme = preferences.getInt(PREF_THEME, DARK);
+        language = preferences.getInt(PREF_LANG, ENGLISH);
 
         switch (theme)
         {
@@ -126,6 +138,8 @@ public class Main extends Activity
         }
 
         setContentView(R.layout.main);
+
+        setLanguage();
 
         TextView.OnEditorActionListener listener = new
             TextView.OnEditorActionListener()
@@ -282,6 +296,38 @@ public class Main extends Activity
             theme(RED);
             break;
 
+        case R.id.english:
+            setLanguage(ENGLISH);
+            break;
+
+        case R.id.italian:
+            setLanguage(ITALIAN);
+            break;
+
+        case R.id.spanish:
+            setLanguage(SPANISH);
+            break;
+
+        case R.id.catalan:
+            setLanguage(CATALAN);
+            break;
+
+        case R.id.french:
+           setLanguage(FRENCH);
+           break;
+
+       case R.id.portuguese:
+           setLanguage(PORTUGUESE);
+           break;
+
+        case R.id.german:
+           setLanguage(GERMAN);
+           break;
+
+        case R.id.dutch:
+           setLanguage(DUTCH);
+           break;
+
         case R.id.help:
             help();
             break;
@@ -356,6 +402,60 @@ public class Main extends Activity
         theme = t;
         if (Build.VERSION.SDK_INT != Build.VERSION_CODES.M)
             recreate();
+    }
+
+    // setLanguage
+    private void setLanguage(int l)
+    {
+        language = l;
+        setLanguage();
+        refresh();
+    }
+
+    // setLanguage
+    private void setLanguage()
+    {
+        Words.setLanguage(this, language);
+        new Solver(new ArrayList<String>(),
+                   new ArrayList<String>(),
+                   new ArrayList<String>(),
+                   new ArrayList<String>(), "").emptyDicWords();
+
+        switch (language)
+        {
+        default:
+        case ENGLISH:
+            getActionBar().setSubtitle(R.string.english);
+            break;
+
+        case ITALIAN:
+            getActionBar().setSubtitle(R.string.italian);
+            break;
+
+        case SPANISH:
+            getActionBar().setSubtitle(R.string.spanish);
+            break;
+
+        case CATALAN:
+            getActionBar().setSubtitle(R.string.catalan);
+            break;
+
+        case FRENCH:
+            getActionBar().setSubtitle(R.string.french);
+            break;
+
+        case PORTUGUESE:
+            getActionBar().setSubtitle(R.string.portuguese);
+            break;
+
+        case GERMAN:
+            getActionBar().setSubtitle(R.string.german);
+            break;
+
+        case DUTCH:
+            getActionBar().setSubtitle(R.string.dutch);
+            break;
+        }
     }
 
     // help

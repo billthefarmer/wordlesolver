@@ -1,11 +1,10 @@
 
 package org.billthefarmer.solver
 
-class Solver(
-    private var g: List<String>, var y1: List<String>, var y2: List<String>,
-    var y3: List<String>, private var gray: String
-) {
-
+class Solver(private var g: List<String>,
+             var y1: List<String>, var y2: List<String>,
+             var y3: List<String>, private var gray: String)
+{
     // g green:  is correct and in the correct position
     // y yellow: is in answer but not in the right position
     // gray:     is not in the answer at all
@@ -76,6 +75,11 @@ class Solver(
         }
     }
 
+    fun emptyDicWords() {
+
+        clearDicWords()
+    }
+
     companion object {
 
         private var dicWords: List<List<String>> = listOf()
@@ -86,9 +90,7 @@ class Solver(
 
                 var tempDicWords = mutableListOf<List<String>>()
                 var tempWords = mutableListOf<String>()
-                tempWords.addAll(dicWords1)
-                tempWords.addAll(dicWords2)
-                tempWords.addAll(dicWords3)
+                tempWords.addAll(Words.getWords())
 
                 tempWords.sort()
 
@@ -103,6 +105,11 @@ class Solver(
             }
 
             return dicWords
+        }
+
+        private fun clearDicWords() {
+
+            dicWords = listOf()
         }
     }
 }
