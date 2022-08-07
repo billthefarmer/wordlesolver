@@ -1,7 +1,5 @@
 # ![Icon](src/main/res/drawable-xhdpi/ic_launcher.png) WordleSolver [![.github/workflows/build.yml](https://github.com/billthefarmer/wordlesolver/actions/workflows/build.yml/badge.svg)](https://github.com/billthefarmer/wordlesolver/actions/workflows/build.yml)
-[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.svg"
-     alt="Get it on F-Droid"
-     height="80">](https://f-droid.org/packages/org.billthefarmer.solver/)
+[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.svg" alt="Get it on F-Droid" height="80">](https://f-droid.org/packages/org.billthefarmer.solver/)
 
 [Wordle](https://www.powerlanguage.co.uk/wordle/)
 ([Gurgle](https://github.com/billthefarmer/gurgle)) solver with code
