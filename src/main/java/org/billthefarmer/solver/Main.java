@@ -417,10 +417,7 @@ public class Main extends Activity
     private void setLanguage()
     {
         Words.setLanguage(this, language);
-        new Solver(new ArrayList<String>(),
-                   new ArrayList<String>(),
-                   new ArrayList<String>(),
-                   new ArrayList<String>(), "").emptyDicWords();
+        Solver.Companion.emptyDicWords();
 
         switch (language)
         {

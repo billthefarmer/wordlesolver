@@ -75,11 +75,6 @@ class Solver(private var g: List<String>,
         }
     }
 
-    fun emptyDicWords() {
-
-        clearDicWords()
-    }
-
     companion object {
 
         private var dicWords: List<List<String>> = listOf()
@@ -107,7 +102,7 @@ class Solver(private var g: List<String>,
             return dicWords
         }
 
-        private fun clearDicWords() {
+        fun emptyDicWords() {
 
             dicWords = listOf()
         }
