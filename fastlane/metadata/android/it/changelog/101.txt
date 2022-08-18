@@ -1,0 +1,2 @@
+* Aggiornata impostazione grafica
+* Aggiunto aiuto
