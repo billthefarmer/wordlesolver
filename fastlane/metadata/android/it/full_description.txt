@@ -1,0 +1,10 @@
+ * Molti temi colorati
+ * Supporto a più lingue
+
+Solitamente risolve le partite di <a href="https://www.powerlanguage.co.uk/wordle/">Wordle</a> e di <a href="https://github.com/billthefarmer/gurgle">Gurgle</a> in quattro tentativi.
+
+L'app usa il codice per calcolare le soluzioni da <a href="https://github.com/PoorLazyCoder/Wordle-Solver">https://github.com/PoorLazyCoder/Wordle-Solver</a>.
+
+Le lettere che sono mostrate in verde nei giochi (<a href="https://www.powerlanguage.co.uk/wordle/">Wordle</a> o <a href="https://github.com/billthefarmer/gurgle">Gurgle</a>) vanno nella prima riga nel posto corretto. Le lettere gialle vanno nelle righe successive nello spazio corretto. Le lettere grigie vanno nell'ultima riga in qualsiasi ordine.
+
+Premi o il bottone Prossimo sulla tastiera o il bottone sulla barra per calcolare le soluzioni. L'app mostrerà una lista di possibili tentativi nella parte bassa dello schermo.
