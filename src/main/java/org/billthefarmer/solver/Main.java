@@ -86,6 +86,7 @@ public class Main extends Activity
     public static final int PORTUGUESE = 5;
     public static final int GERMAN     = 6;
     public static final int DUTCH      = 7;
+    public static final int AFRIKAANS  = 8;
 
     private TextView greyText;
     private TextView resultText;
@@ -329,6 +330,10 @@ public class Main extends Activity
            setLanguage(DUTCH);
            break;
 
+        case R.id.afrikaans:
+           setLanguage(AFRIKAANS);
+           break;
+
         case R.id.help:
             help();
             break;
@@ -452,6 +457,10 @@ public class Main extends Activity
 
         case DUTCH:
             getActionBar().setSubtitle(R.string.dutch);
+            break;
+
+        case AFRIKAANS:
+            getActionBar().setSubtitle(R.string.afrikaans);
             break;
         }
     }

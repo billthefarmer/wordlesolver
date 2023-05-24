@@ -24,6 +24,7 @@
   <string name="portuguese">Portuguese</string>
   <string name="german">German</string>
   <string name="dutch">Dutch</string>
+  <string name="afrikaans">Afrikaans</string>
 
   <string name="version" formatted="false"><a
   href="https://github.com/billthefarmer/solver/releases/latest">%s</a>\n\nBuilt

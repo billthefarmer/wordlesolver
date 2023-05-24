@@ -39,15 +39,16 @@ public class Words
 {
     public static final String TAG = "Words";
 
-    public static final String WORDS_FILE       = "Words.txt";
-    public static final String ENGLISH_FILE     = "English.txt";
-    public static final String ITALIAN_FILE     = "Italian.txt";
-    public static final String SPANISH_FILE     = "Spanish.txt";
-    public static final String CATALAN_FILE     = "Catalan.txt";
-    public static final String FRENCH_FILE      = "French.txt";
-    public static final String PORTUGUESE_FILE  = "Portuguese.txt";
-    public static final String GERMAN_FILE      = "German.txt";
-    public static final String DUTCH_FILE       = "Dutch.txt";
+    public static final String WORDS_FILE      = "Words.txt";
+    public static final String ENGLISH_FILE    = "English.txt";
+    public static final String ITALIAN_FILE    = "Italian.txt";
+    public static final String SPANISH_FILE    = "Spanish.txt";
+    public static final String CATALAN_FILE    = "Catalan.txt";
+    public static final String FRENCH_FILE     = "French.txt";
+    public static final String PORTUGUESE_FILE = "Portuguese.txt";
+    public static final String GERMAN_FILE     = "German.txt";
+    public static final String DUTCH_FILE      = "Dutch.txt";
+    public static final String AFRIKAANS_FILE  = "Afrikaans.txt";
 
     private static List<String> words;
 
@@ -94,6 +95,10 @@ public class Words
 
         case Main.DUTCH:
             readWords(context, DUTCH_FILE, words);
+            break;
+
+        case Main.AFRIKAANS:
+            readWords(context, AFRIKAANS_FILE, words);
             break;
         }
     }
