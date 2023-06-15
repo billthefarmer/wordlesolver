@@ -36,6 +36,7 @@ import android.text.SpannableStringBuilder;
 import android.text.TextWatcher;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -77,6 +78,8 @@ public class Main extends Activity
     public static final int ORANGE = 4;
     public static final int PURPLE = 5;
     public static final int RED    = 6;
+
+    public static final int DELAY = 100;
 
     public static final int ENGLISH    = 0;
     public static final int ITALIAN    = 1;
@@ -223,12 +226,48 @@ public class Main extends Activity
         greyText = (TextView) findViewById(R.id.grey);
         greyText.setOnEditorActionListener(listener);
 
+        resultText = (TextView) findViewById(R.id.result);
+
+        // Delay resizing
+        greenRow.postDelayed(() ->
+        {
+            View layout = findViewById(R.id.layout);
+            View scroll = findViewById(R.id.scroll);
+            float scaleX = (float) layout.getWidth() / greenRow.getWidth();
+            float scaleY = (float) (layout.getHeight() -
+                                    scroll.getHeight()) / greenRow.getWidth();
+            float scale = Math.min(scaleX, scaleY);
+            for (int i = 0; i < greenRow.getChildCount(); i++)
+            {
+                TextView v = (TextView) greenRow.getChildAt(i);
+                v.setMinimumWidth(Math.round(v.getMinimumWidth() * scale));
+                v.setTextSize(TypedValue.COMPLEX_UNIT_PX,
+                              v.getTextSize() * scale);
+            }
+            for (int rowId: ROWS)
+            {
+                ViewGroup yellowRow = findViewById(rowId);
+                for (int i = 0; i < yellowRow.getChildCount(); i++)
+                {
+                    TextView v = (TextView) yellowRow.getChildAt(i);
+                    v.setMinimumWidth(Math.round(v.getMinimumWidth() * scale));
+                    v.setTextSize(TypedValue.COMPLEX_UNIT_PX,
+                                  v.getTextSize() * scale);
+                }
+            }
+            greyText.setMinimumWidth
+                (Math.round(greyText.getMinimumWidth() * scale));
+            greyText.setTextSize(TypedValue.COMPLEX_UNIT_PX,
+                                 greyText.getTextSize() * scale);
+            resultText.setTextSize(TypedValue.COMPLEX_UNIT_PX,
+                                   resultText.getTextSize() * scale);
+        }, DELAY);
+
         greenList = new ArrayList<String>();
         yellowList = new ArrayList<List<String>>();
         for (int i = 0; i < ROWS.length; i++)
             yellowList.add(new ArrayList<String>());
 
-        resultText = (TextView) findViewById(R.id.result);
     }
 
     // onPause

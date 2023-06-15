@@ -2,8 +2,11 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:layout_marginTop="24dp"
+    android:layout_marginBottom="8dp"
     android:layout_marginLeft="8dp"
     android:layout_marginRight="8dp"
     android:orientation="vertical"
@@ -11,10 +14,9 @@
 
   <LinearLayout
       android:id="@+id/green"
-      android:layout_width="fill_parent"
+      android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="24dp"
-      android:gravity="center"
+      android:layout_gravity="center"
       android:orientation="horizontal"
       tools:ignore="Autofill">
 
@@ -125,10 +127,10 @@
 
   <LinearLayout
       android:id="@+id/yellow1"
-      android:layout_width="fill_parent"
+      android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="8dp"
-      android:gravity="center"
+      android:layout_gravity="center"
       android:orientation="horizontal"
       tools:ignore="Autofill">
 
@@ -240,10 +242,10 @@
 
   <LinearLayout
       android:id="@+id/yellow2"
-      android:layout_width="fill_parent"
+      android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="8dp"
-      android:gravity="center"
+      android:layout_gravity="center"
       android:orientation="horizontal"
       tools:ignore="Autofill">
 
@@ -355,10 +357,10 @@
 
   <LinearLayout
       android:id="@+id/yellow3"
-      android:layout_width="fill_parent"
+      android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="8dp"
-      android:gravity="center"
+      android:layout_gravity="center"
       android:orientation="horizontal"
       tools:ignore="Autofill">
 
@@ -468,54 +470,39 @@
 
   </LinearLayout>
 
-  <LinearLayout
-      android:layout_width="fill_parent"
+  <EditText
+      android:id="@+id/grey"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_marginTop="8dp"
+      android:paddingLeft="4dp"
+      android:paddingRight="4dp"
+      android:paddingTop="4dp"
+      android:paddingBottom="4dp"
+      android:background="@drawable/box"
+      android:textColor="#7fffffff"
+      android:hint="123456789012345"
+      android:imeOptions="actionNext"
+      android:inputType="textCapCharacters"
+      android:minWidth="120sp"
+      tools:ignore="Autofill"
+      android:textAppearance="?android:attr/textAppearanceLarge" />
+
+  <ScrollView
+      android:id="@+id/scroll"
+      android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="8dp"
-      android:gravity="center"
-      android:orientation="horizontal"
-      tools:ignore="Autofill">
+      android:layout_gravity="center">
 
-    <EditText
-        android:id="@+id/grey"
+    <TextView
+        android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="4dp"
-        android:paddingRight="4dp"
-        android:paddingTop="4dp"
-        android:paddingBottom="4dp"
-        android:background="@drawable/box"
-        android:textColor="#7fffffff"
-        android:hint="1234567890123456"
-        android:imeOptions="actionNext"
-        android:inputType="textCapCharacters"
-        android:minWidth="120sp"
+        android:typeface="monospace"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-  </LinearLayout>
-
-  <LinearLayout
-      android:layout_width="fill_parent"
-      android:layout_height="wrap_content"
-      android:layout_marginTop="4dp"
-      android:layout_marginBottom="8dp"
-      android:gravity="center"
-      android:orientation="horizontal"
-      tools:ignore="UselessParent">
-
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-      <TextView
-          android:id="@+id/result"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:typeface="monospace"
-          android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    </ScrollView>
-
-  </LinearLayout>
+  </ScrollView>
 
 </LinearLayout>
