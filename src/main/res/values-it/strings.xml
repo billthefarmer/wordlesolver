@@ -11,6 +11,8 @@
   <string name="blue">Blu</string>
   <string name="orange">Arancione</string>
   <string name="purple">Viola</string>
+  <string name="black">Nero</string>
+  <string name="light">Chiaro</string>
   <string name="red">Rosso</string>
   <string name="help">Aiuto</string>
   <string name="about">Informazioni</string>

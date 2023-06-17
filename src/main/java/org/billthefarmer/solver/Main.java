@@ -78,6 +78,8 @@ public class Main extends Activity
     public static final int ORANGE = 4;
     public static final int PURPLE = 5;
     public static final int RED    = 6;
+    public static final int BLACK  = 7;
+    public static final int LIGHT  = 8;
 
     public static final int DELAY = 100;
 
@@ -138,6 +140,14 @@ public class Main extends Activity
 
         case RED:
             setTheme(R.style.AppRedTheme);
+            break;
+
+        case BLACK:
+            setTheme(R.style.AppBlackTheme);
+            break;
+
+        case LIGHT:
+            setTheme(R.style.AppLightTheme);
             break;
         }
 
@@ -335,6 +345,14 @@ public class Main extends Activity
 
         case R.id.red:
             theme(RED);
+            break;
+
+        case R.id.black:
+            theme(BLACK);
+            break;
+
+        case R.id.light:
+            theme(LIGHT);
             break;
 
         case R.id.english:

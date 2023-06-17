@@ -24,7 +24,6 @@
   <color name="orange_box_background">#b44e16</color>
   <color name="orange_box_border">#ffe67f</color>
 
-
   <!--  cyan theme  -->
   <color name="cyan_background">#60e8ff</color>
   <color name="cyan_action_bar">#5696a1</color>
@@ -36,5 +35,13 @@
   <color name="purple_action_bar">#8a3ab5</color>
   <color name="purple_box_background">#9d79b1</color>
   <color name="purple_box_border">#180e1d</color>
+
+  <!--  black theme  -->
+  <color name="black_background">@android:color/black</color>
+  <color name="black_box_border">@android:color/white</color>
+
+  <!-- light theme -->
+  <color name="light_box_background">#808080</color>
+  <color name="light_box_border">@android:color/black</color>
 
 </resources>

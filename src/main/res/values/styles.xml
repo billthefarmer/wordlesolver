@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+  <style name="AppLightBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+    <!--
+        Theme customizations available in newer API levels can go in
+        res/values-vXX/styles.xml, while customizations related to
+        backward-compatibility can go here.
+    -->
+
+    <item name="android:textAppearanceLarge">
+      @style/textAppearanceLargeBold
+    </item>
+
+  </style>
+
   <!--
       Base application theme, dependent on API level. This theme is
       replaced by AppBaseTheme from res/values-vXX/styles.xml on newer
@@ -114,6 +127,35 @@
 
     <item name="box_bgcolour">@color/red_box_background</item>
     <item name="box_bdcolour">@color/red_box_border</item>
+
+  </style>
+
+  <!-- Application theme. -->
+  <style name="AppBlackTheme" parent="AppBaseTheme">
+    <!--
+        All customizations that are NOT specific to a particular
+        API-level can go here.
+    -->
+
+    <item name="android:windowBackground">@color/black_background</item>
+    <item name="dialog_bgcolour">@color/dark_background</item>
+
+    <item name="box_bgcolour">@color/black_background</item>
+    <item name="box_bdcolour">@color/black_box_border</item>
+
+  </style>
+
+  <!-- Application theme. -->
+  <style name="AppLightTheme" parent="AppLightBaseTheme">
+    <!--
+        All customizations that are NOT specific to a particular
+        API-level can go here.
+    -->
+    <item name="android:windowBackground">@android:color/background_light</item>
+    <item name="dialog_bgcolour">@android:color/background_light</item>
+
+    <item name="box_bgcolour">@color/light_box_background</item>
+    <item name="box_bdcolour">@color/light_box_border</item>
 
   </style>
 
