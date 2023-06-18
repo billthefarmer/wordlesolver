@@ -462,6 +462,10 @@ public class Main extends Activity
     // theme
     private void theme(int t)
     {
+        InputMethodManager manager =
+            (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+        manager.hideSoftInputFromWindow(resultText.getWindowToken(), 0);
+
         theme = t;
         if (Build.VERSION.SDK_INT != Build.VERSION_CODES.M)
             recreate();
