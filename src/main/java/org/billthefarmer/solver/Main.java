@@ -265,12 +265,14 @@ public class Main extends Activity
                                   v.getTextSize() * scale);
                 }
             }
-            greyText.setMinimumWidth
-                (Math.round(greyText.getMinimumWidth() * scale));
             greyText.setTextSize(TypedValue.COMPLEX_UNIT_PX,
                                  greyText.getTextSize() * scale);
             resultText.setTextSize(TypedValue.COMPLEX_UNIT_PX,
                                    resultText.getTextSize() * scale);
+            greenRow.postDelayed(() ->
+            {
+                greyText.setMinimumWidth(greenRow.getWidth());
+            }, DELAY);
         }, DELAY);
 
         greenList = new ArrayList<String>();
