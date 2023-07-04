@@ -56,6 +56,7 @@ import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@SuppressWarnings("deprecation")
 public class Main extends Activity
 {
     public static final String TAG = "WordleSolver";

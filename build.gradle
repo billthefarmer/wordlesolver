@@ -6,7 +6,7 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:7.4.2'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.0"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.22"
     }
 }
 
@@ -21,27 +21,31 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 31
     namespace "org.billthefarmer.solver"
 
     defaultConfig {
         applicationId "org.billthefarmer.solver"
         minSdkVersion 16
-        targetSdkVersion 28
-        versionName "1.06"
-        versionCode 106
+        targetSdkVersion 31
+        versionName "1.07"
+        versionCode 107
 
         buildConfigField "long", "BUILT", System.currentTimeMillis() + "L"
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_9
+        targetCompatibility JavaVersion.VERSION_1_9
     }
 
     lintOptions {
         disable 'OldTargetApi', 'NonConstantResourceId', 'ExpiredTargetSdkVersion',
 	'AndroidGradlePluginVersion'
         // abortOnError false
+    }
+
+    kotlinOptions {
+        jvmTarget = '9'
     }
 }
