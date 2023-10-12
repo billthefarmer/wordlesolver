@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-  <style name="AppLightBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+  <style name="AppLightBaseTheme" parent="android:Theme.Material.Light.DarkActionBar">
     <!--
         Theme customizations available in newer API levels can go in
         res/values-vXX/styles.xml, while customizations related to
@@ -19,7 +19,7 @@
       replaced by AppBaseTheme from res/values-vXX/styles.xml on newer
       devices.
   -->
-  <style name="AppBaseTheme" parent="android:Theme.Holo">
+  <style name="AppBaseTheme" parent="android:Theme.Material">
     <!--
         Theme customizations available in newer API levels can go in
         res/values-vXX/styles.xml, while customizations related to
@@ -33,7 +33,7 @@
   </style>
 
   <style name="ActionBarBaseStyle"
-         parent="android:style/Widget.Holo.ActionBar">
+         parent="android:style/Widget.Material.ActionBar">
   </style>
 
   <!-- Application theme. -->

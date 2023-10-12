@@ -45,7 +45,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.PopupMenu;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 import java.text.DateFormat;
 
@@ -58,6 +60,7 @@ import java.util.regex.Pattern;
 
 @SuppressWarnings("deprecation")
 public class Main extends Activity
+    implements PopupMenu.OnMenuItemClickListener
 {
     public static final String TAG = "WordleSolver";
     public static final String PREF_THEME = "pref_theme";
@@ -94,6 +97,7 @@ public class Main extends Activity
     public static final int DUTCH      = 7;
     public static final int AFRIKAANS  = 8;
 
+    private Toolbar toolbar;
     private TextView greyText;
     private TextView resultText;
     private TextView greenArray[];
@@ -155,6 +159,19 @@ public class Main extends Activity
         setContentView(R.layout.main);
 
         setLanguage();
+
+        // Find toolbar
+        toolbar = findViewById(getResources().getIdentifier("action_bar",
+                                                            "id", "android"));
+        // Set up navigation
+        toolbar.setNavigationIcon(R.drawable.ic_menu_white_24dp);
+        toolbar.setNavigationOnClickListener((v) ->
+        {
+            PopupMenu popup = new PopupMenu(this, v);
+            popup.inflate(R.menu.navigation);
+            popup.setOnMenuItemClickListener(this);
+            popup.show();
+        });
 
         TextView.OnEditorActionListener listener = new
             TextView.OnEditorActionListener()
@@ -401,6 +418,26 @@ public class Main extends Activity
         case R.id.about:
             about();
             break;
+        }
+
+        return true;
+    }
+
+    // onMenuItemClick
+    @Override
+    public boolean onMenuItemClick(MenuItem item)
+    {
+        // Get id
+        int id = item.getItemId();
+        switch (id)
+        {
+        // Help
+        case R.id.help:
+            help();
+            break;
+
+        default:
+            return false;
         }
 
         return true;

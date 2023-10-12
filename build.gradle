@@ -26,7 +26,7 @@ android {
 
     defaultConfig {
         applicationId "org.billthefarmer.solver"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 31
         versionName "1.07"
         versionCode 107
