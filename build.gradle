@@ -28,8 +28,8 @@ android {
         applicationId "org.billthefarmer.solver"
         minSdkVersion 21
         targetSdkVersion 31
-        versionName "1.07"
-        versionCode 107
+        versionName "1.08"
+        versionCode 108
 
         buildConfigField "long", "BUILT", System.currentTimeMillis() + "L"
     }
