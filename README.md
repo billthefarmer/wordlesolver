@@ -58,12 +58,13 @@ results.
 | Extras | android.intent.extra.TEXT | string | The text may contain |
 | | | | blanks or dots for |
 | | | | unknown letters, a |
-| | | | comma delimiter |
-| | | | and letters known to |
-| | | | be in results, a |
 | | | | comma delimiter and |
-| | | | letters known to not |
-| | | | be in results |
+| | | | letters known to be |
+| | | | in results, repeated |
+| | | | three times, a comma |
+| | | | delimiter and letters |
+| | | | known to not be in |
+| | | | results |
 
 This may be tested using the [Android Debug
 Bridge](https://developer.android.com/studio/command-line/adb#am).
