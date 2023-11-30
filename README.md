@@ -19,6 +19,7 @@ tries.
 Uses solver code from
 [Wordle-Solver](https://github.com/PoorLazyCoder/Wordle-Solver).
 
+## Using
 Letters that are shown green in the game
 ([Wordle](https://www.powerlanguage.co.uk/wordle),
 [Gurgle](https://github.com/billthefarmer/gurgle)) go in the first
@@ -35,3 +36,39 @@ the bottom.
 Select coloured theme from the **Theme** item in the menu.
 
 Select language from the **Language** item in the menu.
+
+## External control
+Share text from another app, or send an
+[Intent](https://developer.android.com/reference/android/content/Intent)
+with an
+[EXTRA_TEXT](https://developer.android.com/reference/android/content/Intent#EXTRA_TEXT)
+with the text containing the known letters and blanks or dots for the
+unknown letters. The app will start or restart and display the
+results.
+
+| Parameter | Activity/Action/Category/Extra | Type | Value |
+| --------- | ------------------------------ | ---- | ----- |
+| Activity | org.billthefarmer.solver.Main |
+| Action | android.intent.action.MAIN |
+| | android.intent.action.DEFAULT |
+| | android.intent.action.SEND |
+| | android.intent.action.VIEW |
+| Category | android.intent.category.LAUNCHER |
+| | android.intent.category.DEFAULT |
+| Extras | android.intent.extra.TEXT | string | The text may contain |
+| | | | blanks or dots for |
+| | | | unknown letters, a |
+| | | | comma delimiter |
+| | | | and letters known to |
+| | | | be in results, a |
+| | | | comma delimiter and |
+| | | | letters known to not |
+| | | | be in results |
+
+This may be tested using the [Android Debug
+Bridge](https://developer.android.com/studio/command-line/adb#am).
+```shell
+$ adb shell am start -e android.intent.extra.TEXT b.ll,..g,...x,,pb  -n org.billthefarmer.solver/.Main
+Starting: Intent { cmp=org.billthefarmer.solver/.Main (has extras) }
+Warning: Activity not started, its current task has been brought to the front
+```

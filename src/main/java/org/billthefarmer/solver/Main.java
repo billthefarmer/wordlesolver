@@ -65,6 +65,7 @@ public class Main extends Activity
     public static final String TAG = "WordleSolver";
     public static final String PREF_THEME = "pref_theme";
     public static final String PREF_LANG = "pref_lang";
+    public static final String SEPARATOR = "[,;|]";
     public static final String GREEN = "green";
     public static final String YELLOW_1 = "yellow-1";
     public static final String YELLOW_2 = "yellow-2";
@@ -86,6 +87,7 @@ public class Main extends Activity
     public static final int LIGHT  = 8;
 
     public static final int DELAY = 100;
+    public static final int LENGTH = 5;
 
     public static final int ENGLISH    = 0;
     public static final int ITALIAN    = 1;
@@ -297,7 +299,24 @@ public class Main extends Activity
         yellowList = new ArrayList<List<String>>();
         for (int i = 0; i < ROWS.length; i++)
             yellowList.add(new ArrayList<String>());
+    }
 
+    // onResume
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+
+        // Check intent
+        checkIntent(getIntent());
+    }
+
+    // onNewIntent
+    @Override
+    public void onNewIntent(Intent intent)
+    {
+        // Check intent
+        checkIntent(intent);
     }
 
     // onPause
@@ -441,6 +460,103 @@ public class Main extends Activity
         }
 
         return true;
+    }
+
+    // checkIntent
+    private void checkIntent(Intent intent)
+    {
+        if (intent.hasExtra(Intent.EXTRA_TEXT))
+        {
+            // Get text
+            String text = intent.getStringExtra(Intent.EXTRA_TEXT)
+                .toUpperCase(Locale.getDefault());
+            // Ensure it only does it once
+            intent.removeExtra(Intent.EXTRA_TEXT);
+            // Check text
+            if (text.isEmpty())
+                return;
+
+            // Split words
+            String words[] = text.split(SEPARATOR);
+            final String green = words[0];
+            // Check word
+            if (green.length() > LENGTH)
+                return;
+
+            resultText.postDelayed(() ->
+            {
+                // Clear the letters
+                refresh();
+                // Fill in the letters
+                for (int i = 0; i < green.length(); i++)
+                {
+                    TextView letter = greenArray[i];
+                    if (Character.isLetter(green.charAt(i)))
+                        letter.setText(green.substring(i, i + 1));
+                }
+
+                if (words.length > 1 && !words[1].isEmpty())
+                {
+                    String yellow = words[1];
+                    // Check yellow text
+                    if (yellow.length() > LENGTH)
+                        return;
+
+                    // Fill in yellow letters
+                    for (int i = 0; i < yellow.length(); i++)
+                    {
+                        TextView letter = yellowArray[0][i];
+                        if (Character.isLetter(yellow.charAt(i)))
+                            letter.setText(yellow.substring(i, i + 1));
+                    }
+                }
+
+                if (words.length > 2 && !words[2].isEmpty())
+                {
+                    String yellow = words[2];
+                    // Check yellow text
+                    if (yellow.length() > LENGTH)
+                        return;
+
+                    // Fill in yellow letters
+                    for (int i = 0; i < yellow.length(); i++)
+                    {
+                        TextView letter = yellowArray[1][i];
+                        if (Character.isLetter(yellow.charAt(i)))
+                            letter.setText(yellow.substring(i, i + 1));
+                    }
+                }
+
+                if (words.length > 3 && !words[3].isEmpty())
+                {
+                    String yellow = words[3];
+                    // Check yellow text
+                    if (yellow.length() > LENGTH)
+                        return;
+
+                    // Fill in yellow letters
+                    for (int i = 0; i < yellow.length(); i++)
+                    {
+                        TextView letter = yellowArray[2][i];
+                        if (Character.isLetter(yellow.charAt(i)))
+                            letter.setText(yellow.substring(i, i + 1));
+                    }
+                }
+
+                if (words.length > 4 && !words[4].isEmpty())
+                {
+                    String grey = words[4];
+                    // Check grey text
+                    if (grey.length() > LENGTH)
+                        return;
+
+                    greyText.setText(grey);
+                }
+
+                // Solve
+                solve();
+            }, DELAY);
+        }
     }
 
     // refresh
