@@ -88,6 +88,7 @@ public class Main extends Activity
 
     public static final int DELAY = 100;
     public static final int LENGTH = 5;
+    public static final int LONG = 24;
 
     public static final int ENGLISH    = 0;
     public static final int ITALIAN    = 1;
@@ -478,16 +479,18 @@ public class Main extends Activity
 
             // Split words
             String words[] = text.split(SEPARATOR);
+            // Get green letters
             final String green = words[0];
-            // Check word
+            // Check letters
             if (green.length() > LENGTH)
                 return;
 
+            // Delay to give app time to get organised
             resultText.postDelayed(() ->
             {
                 // Clear the letters
                 refresh();
-                // Fill in the letters
+                // Fill in green letters
                 for (int i = 0; i < green.length(); i++)
                 {
                     TextView letter = greenArray[i];
@@ -498,11 +501,11 @@ public class Main extends Activity
                 if (words.length > 1 && !words[1].isEmpty())
                 {
                     String yellow = words[1];
-                    // Check yellow text
+                    // Check yellow letters
                     if (yellow.length() > LENGTH)
                         return;
 
-                    // Fill in yellow letters
+                    // Fill in yellow letters, row 1
                     for (int i = 0; i < yellow.length(); i++)
                     {
                         TextView letter = yellowArray[0][i];
@@ -514,11 +517,11 @@ public class Main extends Activity
                 if (words.length > 2 && !words[2].isEmpty())
                 {
                     String yellow = words[2];
-                    // Check yellow text
+                    // Check yellow letters
                     if (yellow.length() > LENGTH)
                         return;
 
-                    // Fill in yellow letters
+                    // Fill in yellow letters, row 2
                     for (int i = 0; i < yellow.length(); i++)
                     {
                         TextView letter = yellowArray[1][i];
@@ -530,11 +533,11 @@ public class Main extends Activity
                 if (words.length > 3 && !words[3].isEmpty())
                 {
                     String yellow = words[3];
-                    // Check yellow text
+                    // Check yellow letters
                     if (yellow.length() > LENGTH)
                         return;
 
-                    // Fill in yellow letters
+                    // Fill in yellow letters, row 3
                     for (int i = 0; i < yellow.length(); i++)
                     {
                         TextView letter = yellowArray[2][i];
@@ -546,8 +549,8 @@ public class Main extends Activity
                 if (words.length > 4 && !words[4].isEmpty())
                 {
                     String grey = words[4];
-                    // Check grey text
-                    if (grey.length() > LENGTH)
+                    // Check grey letters
+                    if (grey.length() > LONG)
                         return;
 
                     greyText.setText(grey);
