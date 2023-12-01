@@ -605,11 +605,10 @@ public class Main extends Activity
             Log.d(TAG, "Result: " + result);
 
         StringBuilder builder = new StringBuilder();
-        for (int i = 0; i < result.size(); i++)
+        for (List<String> w: result)
         {
-            List w = result.get(i);
-            for (int j = 0; j < w.size(); j++)
-                builder.append(String.format("%s ", w.get(j))
+            for (String l: w)
+                builder.append(String.format("%s ", l)
                                .toUpperCase(Locale.getDefault()));
 
             builder.append("\n");
