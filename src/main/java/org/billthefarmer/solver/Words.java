@@ -49,6 +49,9 @@ public class Words
     public static final String GERMAN_FILE     = "German.txt";
     public static final String DUTCH_FILE      = "Dutch.txt";
     public static final String AFRIKAANS_FILE  = "Afrikaans.txt";
+    public static final String HUNGARIAN_FILE  = "Hungarian.txt";
+    public static final String GREEK_FILE      = "Greek.txt";
+    public static final String SWEDISH_FILE    = "Swedish.txt";
 
     private static List<String> words;
 
@@ -99,6 +102,18 @@ public class Words
 
         case Main.AFRIKAANS:
             readWords(context, AFRIKAANS_FILE, words);
+            break;
+
+        case Main.HUNGARIAN:
+            readWords(context, HUNGARIAN_FILE, words);
+            break;
+
+        case Main.GREEK:
+            readWords(context, GREEK_FILE, words);
+            break;
+
+        case Main.SWEDISH:
+            readWords(context, SWEDISH_FILE, words);
             break;
         }
     }

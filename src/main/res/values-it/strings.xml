@@ -27,6 +27,9 @@
   <string name="german">Tedesco</string>
   <string name="dutch">Olandese</string>
   <string name="afrikaans">Afrikaans</string>
+  <string name="hungarian">Ungherese</string>
+  <string name="greek">Greco</string>
+  <string name="swedish">Svedese</string>
 
   <string name="version" formatted="false"><a
   href="https://github.com/billthefarmer/solver/releases/latest">%s</a>\n\nCompilato il

@@ -99,6 +99,9 @@ public class Main extends Activity
     public static final int GERMAN     = 6;
     public static final int DUTCH      = 7;
     public static final int AFRIKAANS  = 8;
+    public static final int HUNGARIAN  = 9;
+    public static final int GREEK      = 10;
+    public static final int SWEDISH    = 11;
 
     private Toolbar toolbar;
     private TextView greyText;
@@ -431,6 +434,18 @@ public class Main extends Activity
            setLanguage(AFRIKAANS);
            break;
 
+        case R.id.hungarian:
+           setLanguage(HUNGARIAN);
+           break;
+
+        case R.id.greek:
+           setLanguage(GREEK);
+           break;
+
+        case R.id.swedish:
+           setLanguage(SWEDISH);
+           break;
+
         case R.id.help:
             help();
             break;
@@ -680,6 +695,18 @@ public class Main extends Activity
 
         case AFRIKAANS:
             getActionBar().setSubtitle(R.string.afrikaans);
+            break;
+
+        case HUNGARIAN:
+            getActionBar().setSubtitle(R.string.hungarian);
+            break;
+
+        case GREEK:
+            getActionBar().setSubtitle(R.string.greek);
+            break;
+
+        case SWEDISH:
+            getActionBar().setSubtitle(R.string.swedish);
             break;
         }
     }
