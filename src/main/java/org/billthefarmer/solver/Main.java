@@ -85,6 +85,7 @@ public class Main extends Activity
     public static final int RED    = 6;
     public static final int BLACK  = 7;
     public static final int LIGHT  = 8;
+    public static final int WHITE  = 9;
 
     public static final int DELAY = 100;
     public static final int LENGTH = 5;
@@ -133,6 +134,10 @@ public class Main extends Activity
             setTheme(R.style.AppTheme);
             break;
 
+        case LIGHT:
+            setTheme(R.style.AppLightTheme);
+            break;
+
         case CYAN:
             setTheme(R.style.AppCyanTheme);
             break;
@@ -157,8 +162,8 @@ public class Main extends Activity
             setTheme(R.style.AppBlackTheme);
             break;
 
-        case LIGHT:
-            setTheme(R.style.AppLightTheme);
+        case WHITE:
+            setTheme(R.style.AppWhiteTheme);
             break;
         }
 
@@ -170,7 +175,15 @@ public class Main extends Activity
         toolbar = findViewById(getResources().getIdentifier("action_bar",
                                                             "id", "android"));
         // Set up navigation
-        toolbar.setNavigationIcon(R.drawable.ic_menu_white_24dp);
+        switch (theme)
+        {
+        case WHITE:
+            toolbar.setNavigationIcon(R.drawable.ic_menu_black_24dp);
+            break;
+
+        default:
+            toolbar.setNavigationIcon(R.drawable.ic_menu_white_24dp);
+        }
         toolbar.setNavigationOnClickListener((v) ->
         {
             PopupMenu popup = new PopupMenu(this, v);
@@ -370,6 +383,10 @@ public class Main extends Activity
             theme(DARK);
             break;
 
+        case R.id.light:
+            theme(LIGHT);
+            break;
+
         case R.id.cyan:
             theme(CYAN);
             break;
@@ -394,8 +411,8 @@ public class Main extends Activity
             theme(BLACK);
             break;
 
-        case R.id.light:
-            theme(LIGHT);
+        case R.id.white:
+            theme(WHITE);
             break;
 
         case R.id.english:

@@ -61,6 +61,10 @@ public class Help extends Activity
             setTheme(R.style.AppTheme);
             break;
 
+        case Main.LIGHT:
+            setTheme(R.style.AppLightTheme);
+            break;
+
         case Main.CYAN:
             setTheme(R.style.AppCyanTheme);
             break;
@@ -79,6 +83,14 @@ public class Help extends Activity
 
         case Main.RED:
             setTheme(R.style.AppRedTheme);
+            break;
+
+        case Main.BLACK:
+            setTheme(R.style.AppBlackTheme);
+            break;
+
+        case Main.WHITE:
+            setTheme(R.style.AppWhiteTheme);
             break;
         }
 

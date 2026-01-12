@@ -28,6 +28,11 @@
             android:title="@string/dark" />
 
         <item
+            android:id="@+id/light"
+            android:showAsAction="never"
+            android:title="@string/light" />
+
+        <item
             android:id="@+id/cyan"
             android:showAsAction="never"
             android:title="@string/cyan" />
@@ -58,9 +63,9 @@
             android:title="@string/black" />
 
         <item
-            android:id="@+id/light"
+            android:id="@+id/white"
             android:showAsAction="never"
-            android:title="@string/light" />
+            android:title="@string/white" />
 
     </menu>
   </item>
