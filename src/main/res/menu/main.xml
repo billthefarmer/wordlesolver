@@ -6,13 +6,13 @@
 
   <item
       android:id="@+id/refresh"
-      android:icon="@drawable/ic_autorenew_white_24dp"
+      android:icon="?attr/menu_refresh"
       android:showAsAction="ifRoom"
       android:title="@string/refresh" />
 
   <item
       android:id="@+id/solve"
-      android:icon="@drawable/ic_replay_white_24dp"
+      android:icon="?attr/menu_solve"
       android:showAsAction="ifRoom"
       android:title="@string/solve" />
 

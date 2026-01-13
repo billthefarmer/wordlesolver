@@ -8,6 +8,9 @@
     <attr name="box_bgcolour"  format="reference" />
     <attr name="box_bdcolour"  format="reference" />
 
+    <attr name="menu_refresh" format="reference" />
+    <attr name="menu_solve" format="reference" />
+
   </declare-styleable>
 
 </resources>

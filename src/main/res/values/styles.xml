@@ -12,6 +12,9 @@
       @style/textAppearanceLargeBold
     </item>
 
+    <item name="menu_refresh">@drawable/ic_autorenew_white_24dp</item>
+    <item name="menu_solve">@drawable/ic_refresh_white_24dp</item>
+
   </style>
 
   <!--
@@ -30,6 +33,9 @@
       @style/textAppearanceLargeBold
     </item>
 
+    <item name="menu_refresh">@drawable/ic_autorenew_white_24dp</item>
+    <item name="menu_solve">@drawable/ic_refresh_white_24dp</item>
+
   </style>
 
   <style name="AppWhiteBaseTheme" parent="android:Theme.Material.Light">
@@ -42,6 +48,9 @@
     <item name="android:textAppearanceLarge">
       @style/textAppearanceLargeBold
     </item>
+
+    <item name="menu_refresh">@drawable/ic_autorenew_black_24dp</item>
+    <item name="menu_solve">@drawable/ic_refresh_black_24dp</item>
 
   </style>
 
@@ -60,6 +69,9 @@
 
     <item name="box_bgcolour">@color/dark_box_background</item>
     <item name="box_bdcolour">@color/dark_box_border</item>
+
+    <item name="menu_refresh">@drawable/ic_autorenew_white_24dp</item>
+    <item name="menu_solve">@drawable/ic_refresh_white_24dp</item>
 
   </style>
 
