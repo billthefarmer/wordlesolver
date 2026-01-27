@@ -52,6 +52,7 @@ public class Words
     public static final String HUNGARIAN_FILE  = "Hungarian.txt";
     public static final String GREEK_FILE      = "Greek.txt";
     public static final String SWEDISH_FILE    = "Swedish.txt";
+    public static final String DANISH_FILE     = "Danish.txt";
 
     private static List<String> words;
 
@@ -114,6 +115,10 @@ public class Words
 
         case Main.SWEDISH:
             readWords(context, SWEDISH_FILE, words);
+            break;
+
+        case Main.DANISH:
+            readWords(context, DANISH_FILE, words);
             break;
         }
     }

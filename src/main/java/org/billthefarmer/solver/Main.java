@@ -103,6 +103,7 @@ public class Main extends Activity
     public static final int HUNGARIAN  = 9;
     public static final int GREEK      = 10;
     public static final int SWEDISH    = 11;
+    public static final int DANISH     = 12;
 
     private Toolbar toolbar;
     private TextView greyText;
@@ -463,6 +464,10 @@ public class Main extends Activity
            setLanguage(SWEDISH);
            break;
 
+        case R.id.danish:
+           setLanguage(DANISH);
+           break;
+
         case R.id.help:
             help();
             break;
@@ -724,6 +729,10 @@ public class Main extends Activity
 
         case SWEDISH:
             getActionBar().setSubtitle(R.string.swedish);
+            break;
+
+        case DANISH:
+            getActionBar().setSubtitle(R.string.danish);
             break;
         }
     }
