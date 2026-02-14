@@ -91,8 +91,8 @@ class Solver(private var g: List<String>,
 
                 tempWords.forEach {
                     val w = it.split("").toMutableList()
-                    w.removeFirst()
-                    w.removeLast()
+                    w.removeAt(0)
+                    w.removeAt(w.lastIndex)
                     tempDicWords.add(w)
                 }
 
