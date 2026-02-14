@@ -5,7 +5,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.4.2'
+        classpath 'com.android.tools.build:gradle:8.13.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.22"
     }
 }
@@ -21,13 +21,13 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 35
     namespace "org.billthefarmer.solver"
 
     defaultConfig {
         applicationId "org.billthefarmer.solver"
         minSdkVersion 21
-        targetSdkVersion 31
+        targetSdkVersion 35
         versionName "1.12"
         versionCode 112
 
@@ -37,6 +37,10 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_9
         targetCompatibility JavaVersion.VERSION_1_9
+    }
+
+    buildFeatures {
+        buildConfig = true
     }
 
     lintOptions {
